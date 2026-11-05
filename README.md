@@ -51,10 +51,11 @@ kubectl get deployments -n nodeport-lab
 kubectl get svc -n nodeport-lab
 kubectl describe svc nginx-nodeport-service -n nodeport-lab
 ```
-
+```bash
 kubectl port-forward -n nodeport-lab svc/nginx-nodeport-service 30080:80
-minikube service nginx-nodeport-service -n nodeport-lab --url
 
+minikube service nginx-nodeport-service -n nodeport-lab --url
+```
 ## Application Access
 
 http://localhost:30080
